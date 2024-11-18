@@ -1,0 +1,14 @@
+<!-- templates/home.html -->
+{% extends "base.html" %}
+
+{% block content %}
+  <h1>Bienvenido al inicio</h1>
+
+  {% if user.is_authenticated %}
+    <!-- Si el usuario está autenticado, muestra el enlace para cerrar sesión -->
+    <a href="{% url 'logout' %}">Cerrar sesión</a>
+  {% else %}
+    <!-- Si el usuario no está autenticado, muestra el enlace para iniciar sesión -->
+    <a href="{% url 'login' %}">Iniciar sesión</a>
+  {% endif %}
+{% endblock %}
