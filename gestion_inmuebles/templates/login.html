@@ -1,4 +1,6 @@
 <!-- gestion_inmuebles/templates/registration/login.html -->
+{% extends "base.html" %}
+{% block content %}
 <!DOCTYPE html>
 <html lang="es">
 <head>
@@ -16,4 +18,4 @@
     <p>¿No tienes una cuenta? <a href="{% url 'register' %}">Regístrate</a></p>
 </body>
 </html>
-
+{% endblock %}
